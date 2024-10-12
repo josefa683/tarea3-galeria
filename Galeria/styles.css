@@ -1,0 +1,113 @@
+* {
+        /* Modo Celular 0 < 767px */
+        .caja {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .body {      
+             font-family: Arial, sans-serif;
+             background-color: var(--gallery-bg-color);
+        }
+
+        nav.navbar {
+            background-color: var(--nav-bg-color);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        display: grid;
+        gap: 10px;
+        padding: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        background-color: #c90909;
+    }
+
+    .gallery-item {
+        background-color: var(--gallery-item-bg-color);
+        border: 1px solid var(--gallery-item-border-color);
+        padding: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+        /* Desde 767px hacia arriba aplica estos otros estilos */
+        @media screen and (min-width: 767px) {
+            .caja {
+                background-color: cornflowerblue;
+            }
+
+            h1 {
+                font-size: 8rem;
+            }
+        }
+
+         /* Desde 1024px hacia arriba aplica estos otros estilos */
+        @media  screen and (min-width: 1024px) {
+            .caja {
+                background-color: deepskyblue;
+                height: 50vh;
+            }
+
+    h1 {
+        font-size: 10rem;
+    }
+}
+    /* Desde 1024px hacia arriba aplica estos otros estilos */
+    @media screen and (min-widht: 1024px) {
+        .caja {
+            background-color: chocolate;
+            height: 50vh;
+        }
+
+        h1 {
+            font-size: 16rem;
+        }        
+    }
+
+    :root { /*Tono*/
+        :root {
+            --nav-bg-color: #b2df0f;
+            --nav-text-color: #d118d1;
+            --gallery-bg-color: #c90909;
+            --gallery-item-bg-color: #b31e4a;
+            --gallery-item-border-color: #5f0505;
+        }
+    }
+
+    section.gallery {
+        display: grid;
+        gap: 10px;
+        padding: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        background-color: #c90909;
+    }
+
+    .gallery-item {
+        background-color: var(--gallery-item-bg-color);
+        border: 1px solid var(--gallery-item-border-color);
+        padding: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    @media screen (max-width:768px) {
+        nav.navbar {
+            padding:0.5rem
+        }
+    } 
+}
